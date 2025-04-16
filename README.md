@@ -18,7 +18,7 @@ O conjunto de dados contém informações sobre pacientes com câncer de mama, i
 ## Requisitos
 
 - Python 3.7 ou superior
-- pip (gerenciador de pacotes Python)
+- PIP (gerenciador de pacotes Python)
 
 ## Instalação
 
