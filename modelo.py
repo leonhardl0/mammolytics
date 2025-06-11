@@ -21,7 +21,7 @@ def preparar_dados(X, y):
     print("Preparando dados...")
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     
-    # Normalização dos dados
+    # normalização dos dados
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)
@@ -66,22 +66,22 @@ def salvar_modelo(modelo, scaler):
     print("Modelo salvo como 'modelo_iris.pkl'")
 
 def main():
-    # Carrega os dados
+    # carrega os dados
     X, y = carregar_dados()
     
-    # Prepara os dados
+    # prepara os dados
     X_train, X_test, y_train, y_test, scaler = preparar_dados(X, y)
     
-    # Treina o modelo
+    # treina o modelo
     modelo = treinar_modelo(X_train, y_train)
     
-    # Avalia o modelo
+    # avalia o modelo
     avaliar_modelo(modelo, X_test, y_test)
     
-    # Visualiza a importância das características
+    # visualiza a importância das características
     visualizar_importancia_features(modelo, X.columns)
     
-    # Salva o modelo
+    # salva o modelo
     salvar_modelo(modelo, scaler)
 
 if __name__ == "__main__":
